@@ -16,7 +16,7 @@ public class Chamomile extends Flower {
 
     public Chamomile(double price) {
         this.setFlowerType(FlowerType.CHAMOMILE);
-        this.setSepalLength(5);
+        this.setSepalLength(baseSepalLength);
         this.setColor(FlowerColor.VIOLET);
         this.setPrice(price);
     }

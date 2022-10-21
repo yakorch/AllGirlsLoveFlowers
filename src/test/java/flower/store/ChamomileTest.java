@@ -42,9 +42,9 @@ public class ChamomileTest {
 
     @Test
     public void testPrice() {
-        int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
-        chamomile.setPrice(price);
-        Assertions.assertEquals(price, chamomile.getPrice());
+        int priceNew = RANDOM_GENERATOR.nextInt(MAX_PRICE);
+        chamomile.setPrice(priceNew);
+        Assertions.assertEquals(priceNew, chamomile.getPrice());
     }
 
     @Test

@@ -23,7 +23,8 @@ public class TulipTest {
     public void testDefault() {
         Assertions.assertEquals("#0000FF", tulip.getColor());
         Assertions.assertEquals(tulip.getBasePrice(), tulip.getPrice());
-        Assertions.assertEquals(tulip.getBaseSepalLength(), tulip.getSepalLength());
+        Assertions.assertEquals(tulip.getBaseSepalLength(),
+                tulip.getSepalLength());
         Assertions.assertEquals(FlowerType.TULIP, tulip.getFlowerType());
     }
 
@@ -31,7 +32,8 @@ public class TulipTest {
     public void testConstructor() {
         Tulip changedTulip = new Tulip(price);
         Assertions.assertEquals(price, changedTulip.getPrice());
-        Assertions.assertEquals(changedTulip.getSepalLength(), changedTulip.getSepalLength());
+        Assertions.assertEquals(changedTulip.getSepalLength(),
+                changedTulip.getSepalLength());
         Assertions.assertEquals("#0000FF", changedTulip.getColor());
         changedTulip.setPrice(anotherPrice);
         Assertions.assertEquals(anotherPrice, changedTulip.getPrice());

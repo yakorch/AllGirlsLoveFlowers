@@ -31,7 +31,8 @@ public class RoseTest {
     public void testConstructor() {
         Rose changedRose = new Rose(price);
         Assertions.assertEquals(price, changedRose.getPrice());
-        Assertions.assertEquals(changedRose.getSepalLength(), changedRose.getSepalLength());
+        Assertions.assertEquals(changedRose.getSepalLength(),
+                changedRose.getSepalLength());
         Assertions.assertEquals("#FF0000", rose.getColor());
         changedRose.setPrice(anotherPrice);
         Assertions.assertEquals(anotherPrice, changedRose.getPrice());
@@ -39,9 +40,9 @@ public class RoseTest {
 
     @Test
     public void testPrice() {
-        int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
-        rose.setPrice(price);
-        Assertions.assertEquals(price, rose.getPrice());
+        int priceNew = RANDOM_GENERATOR.nextInt(MAX_PRICE);
+        rose.setPrice(priceNew);
+        Assertions.assertEquals(priceNew, rose.getPrice());
     }
 
     @Test

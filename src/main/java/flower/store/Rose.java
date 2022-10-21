@@ -19,7 +19,7 @@ public class Rose extends Flower {
     public Rose(double price) {
 //      constructor with price
         this.setFlowerType(FlowerType.ROSE);
-        this.setSepalLength(4);
+        this.setSepalLength(baseSepalLength);
         this.setPrice(price);
         this.setColor(FlowerColor.RED);
     }
