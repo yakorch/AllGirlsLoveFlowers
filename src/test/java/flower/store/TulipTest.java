@@ -27,12 +27,14 @@ public class TulipTest {
 
     @Test
     public void testConstructor() {
-        Tulip new_tulip = new Tulip(250);
-        Assertions.assertEquals(250, new_tulip.getPrice());
-        Assertions.assertEquals(3, new_tulip.getSepalLength());
-        Assertions.assertEquals("#0000FF", new_tulip.getColor());
-        new_tulip.setPrice(200);
-        Assertions.assertEquals(200, new_tulip.getPrice());
+        int price = 250;
+        Tulip changedTulip = new Tulip(price);
+        Assertions.assertEquals(price, changedTulip.getPrice());
+        Assertions.assertEquals(changedTulip.baseSepalLength, changedTulip.getSepalLength());
+        Assertions.assertEquals("#0000FF", changedTulip.getColor());
+        int priceAnother = 200;
+        changedTulip.setPrice(priceAnother);
+        Assertions.assertEquals(priceAnother, changedTulip.getPrice());
     }
 
     @Test

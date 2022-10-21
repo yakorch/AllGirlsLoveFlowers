@@ -26,12 +26,14 @@ public class RoseTest {
 
     @Test
     public void testConstructor() {
-        Rose new_rose = new Rose(150);
-        Assertions.assertEquals(150, new_rose.getPrice());
-        Assertions.assertEquals(4, new_rose.getSepalLength());
+        int price = 150;
+        Rose changedRose = new Rose(price);
+        Assertions.assertEquals(price, changedRose.getPrice());
+        Assertions.assertEquals(changedRose.baseSepalLength, changedRose.getSepalLength());
         Assertions.assertEquals("#FF0000", rose.getColor());
-        new_rose.setPrice(200);
-        Assertions.assertEquals(200, new_rose.getPrice());
+        int anotherPrice = 200;
+        changedRose.setPrice(anotherPrice);
+        Assertions.assertEquals(anotherPrice, changedRose.getPrice());
     }
 
     @Test

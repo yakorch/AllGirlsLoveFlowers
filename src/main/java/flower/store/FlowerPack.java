@@ -1,5 +1,8 @@
 package flower.store;
 
+import lombok.Getter;
+
+@Getter
 public class FlowerPack {
     private final Flower flower;
     private final int quantity;

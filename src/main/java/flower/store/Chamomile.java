@@ -1,11 +1,14 @@
 package flower.store;
 
 public class Chamomile extends Flower {
+    public final int basePrice = 39;
+    public final int baseSepalLength = 5;
+
     public Chamomile() {
         this.setFlowerType(FlowerType.CHAMOMILE);
-        this.setSepalLength(5);
+        this.setSepalLength(baseSepalLength);
         this.setColor(FlowerColor.VIOLET);
-        this.setPrice(39);
+        this.setPrice(basePrice);
     }
 
     public Chamomile(double price) {

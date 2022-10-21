@@ -20,19 +20,21 @@ public class ChamomileTest {
     @Test
     public void testDefault() {
         Assertions.assertEquals("#7f00ff", chamomile.getColor());
-        Assertions.assertEquals(39, chamomile.getPrice());
-        Assertions.assertEquals(5, chamomile.getSepalLength());
+        Assertions.assertEquals(chamomile.basePrice, chamomile.getPrice());
+        Assertions.assertEquals(chamomile.baseSepalLength, chamomile.getSepalLength());
         Assertions.assertEquals(FlowerType.CHAMOMILE, chamomile.getFlowerType());
     }
 
     @Test
     public void testConstructor() {
-        Chamomile new_chamomile = new Chamomile(100);
-        Assertions.assertEquals(100, new_chamomile.getPrice());
-        Assertions.assertEquals(5, new_chamomile.getSepalLength());
-        Assertions.assertEquals("#7f00ff", new_chamomile.getColor());
-        new_chamomile.setPrice(40);
-        Assertions.assertEquals(40, new_chamomile.getPrice());
+        int price = 100;
+        Chamomile changedChamomile = new Chamomile(price);
+        Assertions.assertEquals(price, changedChamomile.getPrice());
+        Assertions.assertEquals(changedChamomile.baseSepalLength, changedChamomile.getSepalLength());
+        Assertions.assertEquals("#7f00ff", changedChamomile.getColor());
+        int anotherPrice = 40;
+        changedChamomile.setPrice(anotherPrice);
+        Assertions.assertEquals(anotherPrice, changedChamomile.getPrice());
     }
 
     @Test

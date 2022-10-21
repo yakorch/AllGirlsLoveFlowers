@@ -1,15 +1,15 @@
 package flower.store;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Assertions;
 
 import java.util.Random;
 
 public class FlowerBucketTest {
     private static final Random RANDOM_GENERATOR = new Random();
-    private static final int MAX_QUANTITY = 1000;
-    private static final int MAX_PRICE = 100;
+    private static final int MAX_QUANTITY = 100;
+    private static final int MAX_PRICE = 1000;
 
     private FlowerBucket flowerBucket;
 
@@ -32,18 +32,19 @@ public class FlowerBucketTest {
     @Test
     public void testMore() {
         flowerBucket = new FlowerBucket();
-        int quan1 = RANDOM_GENERATOR.nextInt(MAX_PRICE);
-        int quan2 = RANDOM_GENERATOR.nextInt(MAX_PRICE);
+        int quanRose = RANDOM_GENERATOR.nextInt(MAX_PRICE);
+        int quanTulip = RANDOM_GENERATOR.nextInt(MAX_PRICE);
 
         Rose rose = new Rose();
         Tulip tulip = new Tulip();
 
-        FlowerPack flowerPack1 = new FlowerPack(rose, quan1);
-        FlowerPack flowerPack2 = new FlowerPack(tulip, quan2);
+        FlowerPack flowerPackRose = new FlowerPack(rose, quanRose);
+        FlowerPack flowerPackTulip = new FlowerPack(tulip, quanTulip);
 
-        flowerBucket.add(flowerPack1);
-        flowerBucket.add(flowerPack2);
+        flowerBucket.add(flowerPackRose);
+        flowerBucket.add(flowerPackTulip);
 
-        Assertions.assertEquals(quan1 * rose.getPrice() + quan2 * tulip.getPrice(), flowerBucket.getPrice());
+        Assertions.assertEquals(quanRose * rose.getPrice() +
+                quanTulip * tulip.getPrice(), flowerBucket.getPrice());
     }
 }

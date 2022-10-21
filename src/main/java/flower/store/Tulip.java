@@ -1,11 +1,14 @@
 package flower.store;
 
 public class Tulip extends Flower {
+    public final int basePrice = 55;
+    public final int baseSepalLength = 3;
+
     public Tulip() {
         this.setFlowerType(FlowerType.TULIP);
-        this.setSepalLength(3);
+        this.setSepalLength(baseSepalLength);
         this.setColor(FlowerColor.BLUE);
-        this.setPrice(55);
+        this.setPrice(basePrice);
     }
 
     public Tulip(double price) {

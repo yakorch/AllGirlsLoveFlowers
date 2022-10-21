@@ -21,6 +21,4 @@ public class FlowerPackTest {
             Assertions.assertEquals(quantity * price, pack.getPrice());
         }
     }
-
-
 }
