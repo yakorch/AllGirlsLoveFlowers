@@ -18,7 +18,7 @@ public class ChamomileTest {
     }
 
     @Test
-    public void testDefault(){
+    public void testDefault() {
         Assertions.assertEquals("#7f00ff", chamomile.getColor());
         Assertions.assertEquals(39, chamomile.getPrice());
         Assertions.assertEquals(5, chamomile.getSepalLength());
@@ -26,7 +26,7 @@ public class ChamomileTest {
     }
 
     @Test
-    public void testConstructor(){
+    public void testConstructor() {
         Chamomile new_chamomile = new Chamomile(100);
         Assertions.assertEquals(100, new_chamomile.getPrice());
         Assertions.assertEquals(5, new_chamomile.getSepalLength());

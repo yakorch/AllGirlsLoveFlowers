@@ -30,7 +30,7 @@ public class FlowerBucketTest {
     }
 
     @Test
-    public void testMore(){
+    public void testMore() {
         flowerBucket = new FlowerBucket();
         int quan1 = RANDOM_GENERATOR.nextInt(MAX_PRICE);
         int quan2 = RANDOM_GENERATOR.nextInt(MAX_PRICE);
@@ -44,6 +44,6 @@ public class FlowerBucketTest {
         flowerBucket.add(flowerPack1);
         flowerBucket.add(flowerPack2);
 
-        Assertions.assertEquals(quan1*rose.getPrice() + quan2*tulip.getPrice(), flowerBucket.getPrice());
+        Assertions.assertEquals(quan1 * rose.getPrice() + quan2 * tulip.getPrice(), flowerBucket.getPrice());
     }
 }

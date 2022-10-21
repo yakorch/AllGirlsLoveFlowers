@@ -17,7 +17,7 @@ public class RoseTest {
     }
 
     @Test
-    public void testDefault(){
+    public void testDefault() {
         Assertions.assertEquals("#FF0000", rose.getColor());
         Assertions.assertEquals(99, rose.getPrice());
         Assertions.assertEquals(4, rose.getSepalLength());
@@ -25,7 +25,7 @@ public class RoseTest {
     }
 
     @Test
-    public void testConstructor(){
+    public void testConstructor() {
         Rose new_rose = new Rose(150);
         Assertions.assertEquals(150, new_rose.getPrice());
         Assertions.assertEquals(4, new_rose.getSepalLength());
