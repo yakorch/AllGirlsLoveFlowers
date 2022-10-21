@@ -41,9 +41,9 @@ public class TulipTest {
 
     @Test
     public void testPrice() {
-        int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
-        tulip.setPrice(price);
-        Assertions.assertEquals(price, tulip.getPrice());
+        int priceNew = RANDOM_GENERATOR.nextInt(MAX_PRICE);
+        tulip.setPrice(priceNew);
+        Assertions.assertEquals(priceNew, tulip.getPrice());
     }
 
     @Test
