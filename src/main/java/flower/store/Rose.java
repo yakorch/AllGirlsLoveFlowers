@@ -1,10 +1,13 @@
 package flower.store;
 
 
+import lombok.Getter;
+
+@Getter
 public class Rose extends Flower {
 
-    public final int basePrice = 99;
-    public final int baseSepalLength = 4;
+    private final int basePrice = 99;
+    private final int baseSepalLength = 4;
 
     public Rose() {
         this.setFlowerType(FlowerType.ROSE);

@@ -10,6 +10,8 @@ import java.util.Random;
 public class TulipTest {
     private static final Random RANDOM_GENERATOR = new Random();
     private static final int MAX_PRICE = 300;
+    private final int price = 250;
+    private final int anotherPrice = 200;
     private Tulip tulip;
 
     @BeforeEach
@@ -20,21 +22,19 @@ public class TulipTest {
     @Test
     public void testDefault() {
         Assertions.assertEquals("#0000FF", tulip.getColor());
-        Assertions.assertEquals(55, tulip.getPrice());
-        Assertions.assertEquals(3, tulip.getSepalLength());
+        Assertions.assertEquals(tulip.getBasePrice(), tulip.getPrice());
+        Assertions.assertEquals(tulip.getBaseSepalLength(), tulip.getSepalLength());
         Assertions.assertEquals(FlowerType.TULIP, tulip.getFlowerType());
     }
 
     @Test
     public void testConstructor() {
-        int price = 250;
         Tulip changedTulip = new Tulip(price);
         Assertions.assertEquals(price, changedTulip.getPrice());
-        Assertions.assertEquals(changedTulip.baseSepalLength, changedTulip.getSepalLength());
+        Assertions.assertEquals(changedTulip.getSepalLength(), changedTulip.getSepalLength());
         Assertions.assertEquals("#0000FF", changedTulip.getColor());
-        int priceAnother = 200;
-        changedTulip.setPrice(priceAnother);
-        Assertions.assertEquals(priceAnother, changedTulip.getPrice());
+        changedTulip.setPrice(anotherPrice);
+        Assertions.assertEquals(anotherPrice, changedTulip.getPrice());
     }
 
     @Test

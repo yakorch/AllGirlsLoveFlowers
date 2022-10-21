@@ -44,7 +44,7 @@ public class FlowerBucketTest {
         flowerBucket.add(flowerPackRose);
         flowerBucket.add(flowerPackTulip);
 
-        Assertions.assertEquals(quanRose * rose.getPrice() +
-                quanTulip * tulip.getPrice(), flowerBucket.getPrice());
+        Assertions.assertEquals(quanRose * rose.getPrice()
+                + quanTulip * tulip.getPrice(), flowerBucket.getPrice());
     }
 }

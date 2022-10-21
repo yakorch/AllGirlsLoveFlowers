@@ -1,8 +1,11 @@
 package flower.store;
 
+import lombok.Getter;
+
+@Getter
 public class Chamomile extends Flower {
-    public final int basePrice = 39;
-    public final int baseSepalLength = 5;
+    private final int basePrice = 39;
+    private final int baseSepalLength = 5;
 
     public Chamomile() {
         this.setFlowerType(FlowerType.CHAMOMILE);

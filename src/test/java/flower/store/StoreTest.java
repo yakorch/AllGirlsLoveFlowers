@@ -52,17 +52,19 @@ public class StoreTest {
         for (int i = 0; i < numberPacksChamomile; i++) {
             Chamomile chamomile = new Chamomile();
             chamomile.setPrice(priceChamomile);
-            flowerBucketChamomile.add(new FlowerPack(chamomile, numberPacksChamomile));
+            flowerBucketChamomile.add(new FlowerPack(chamomile,
+                    numberPacksChamomile));
         }
 
         store.addBucket(flowerBucketRose);
         store.addBucket(flowerBucketChamomile);
         int numberTulips = 0;
-        int numberRoses = (int) Math.pow(numberPacksRose, 2);
-        int numberChamomiles = (int) Math.pow(numberPacksChamomile, 2);
+        int numberRoses = numberPacksRose * numberPacksRose;
+        int numberChamomiles = numberPacksChamomile * numberPacksChamomile;
 
         Assertions.assertEquals(numberTulips, store.search(FlowerType.TULIP));
         Assertions.assertEquals(numberRoses, store.search(FlowerType.ROSE));
-        Assertions.assertEquals(numberChamomiles, store.search(FlowerType.CHAMOMILE));
+        Assertions.assertEquals(numberChamomiles,
+                store.search(FlowerType.CHAMOMILE));
     }
 }
